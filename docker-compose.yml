@@ -23,5 +23,7 @@ services:
       context: .
       dockerfile: docker/php/Dockerfile
     restart: on-failure
+    volumes:
+      - '.:/usr/src/app'
     env_file:
       - .env
